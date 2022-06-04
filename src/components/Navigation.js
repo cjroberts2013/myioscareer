@@ -1,39 +1,20 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react'
+import {Link} from 'gatsby'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import Footer from "./../components/Footer"
-
-import headerLogo from './../images/HQ5.png'
+import Hero from './Hero'
+import Contact from './Contact'
 
 const navigation = [
-  { name: 'Blog', href: '/#home' },
+  { name: 'Pricing', href: '/#pricing' },
   { name: 'About', href: '/#about' },
+  { name: 'Contact Us', href: '/contact' }
 ]
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
-
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
-
+export default function Navigation({page, option}) {
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <div id="home" className="relative overflow-hidden">
+    <div id="home" className="relative overflow-hidden">
       <Popover as="header" className="relative">
         <div className="bg-white pt-6">
           <nav
@@ -44,11 +25,7 @@ const Layout = ({ location, title, children }) => {
               <div className="flex items-center justify-between w-full md:w-auto">
                 <div className="">
                   <Link to="/#home" className="text-base font-bold text-gray-800">
-                    <img 
-                      className="h-14 w-auto sm:h-14"
-                      src={headerLogo}
-                      alt="My iOS Career Logo"
-                    />
+                    Charles Roberts Design
                   </Link>
                 </div>
                 <div className="-mr-2 flex items-center md:hidden">
@@ -60,11 +37,17 @@ const Layout = ({ location, title, children }) => {
               </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-              <Link to="/#home" className="text-base font-medium text-gray-800 hover:text-gray-300">
-                Blog
+              <Link to="/#pricing" className="text-base font-medium text-gray-800 hover:text-gray-300">
+                Pricing
               </Link>
               <Link to="/#about" className="text-base font-medium text-gray-800 hover:text-gray-300">
                 About
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-secondary hover:ring-offset-white"
+              >
+                Contact Us
               </Link>
             </div>
           </nav>
@@ -85,7 +68,7 @@ const Layout = ({ location, title, children }) => {
                 <div className="text-base font-bold text-gray-800">
                   <Popover.Button>
                     <Link to="/#home" className="text-base font-bold text-gray-800">
-                      My iOS Career
+                      Charles Roberts Design
                     </Link>
                   </Popover.Button>
                 </div>
@@ -113,23 +96,9 @@ const Layout = ({ location, title, children }) => {
           </Popover.Panel>
         </Transition>
       </Popover>
-      <main>{children}</main>
-    </div>
 
-
-
-
-
-      {/* <main>{children}</main> */}
-
-
-
-      {/* <footer>
-        © {new Date().getFullYear()}, My iOS Career
-      </footer> */}
-       <Footer />
+      {/* Render hero or hero2 depending on which page is active */}
+      {page === "Hero" ? <Hero /> : <Contact option={option}/>}
     </div>
   )
 }
-
-export default Layout
