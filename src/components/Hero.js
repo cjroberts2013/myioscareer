@@ -10,8 +10,8 @@ export default function Hero() {
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div className="lg:py-24">
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-gray-800 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">My iOS Career</span>
-                    {/* <span className="block text-tertiary">that get Results</span> */}
+                    <span className="block">Personal Growth</span>
+                    <span className="block text-blue">for iOS Developers</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                   My goal here on My iOS Career is to help other iOS developers learn and grow their own careers. Whether you are just starting your journey or you are a seasoned vet, I hope to provide value and insights on how you can continue growing your skills. Let’s get swifty.

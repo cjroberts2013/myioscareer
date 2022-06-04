@@ -3,6 +3,7 @@ import {Link} from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faInstagram, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import footerLogo from './../images/T1.png'
 
 
 library.add(faLinkedin, faGithub, faInstagram, faTwitter)
@@ -13,7 +14,12 @@ export default function Footer() {
             <div className="pt-16">
                 <div className="grid md:grid-cols-12 gap-4">
                     <div className="md:col-span-5 grid gap-4 mb-auto">
-                        <p className="text-2xl font-semibold">My iOS Career</p>
+                        {/* <p className="text-2xl font-semibold">My iOS Career</p> */}
+                        <img
+                            className="h-16"
+                            src={footerLogo}
+                            alt="Company name"
+                        />
                         <div>
                             <p>My goal here on My iOS Career is to help other iOS developers learn and grow their own careers. Whether you are just starting your journey or you are a seasoned vet, I hope to provide value and insights on how you can continue growing your skills. Let’s get swifty.</p>
                         </div>

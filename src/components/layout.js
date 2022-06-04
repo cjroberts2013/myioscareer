@@ -5,7 +5,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Footer from "./../components/Footer"
 
-import headerLogo from './../images/HQ5.png'
+import headerLogo from './../images/T1.png'
 
 const navigation = [
   { name: 'Blog', href: '/#home' },
@@ -45,7 +45,7 @@ const Layout = ({ location, title, children }) => {
                 <div className="">
                   <Link to="/#home" className="text-base font-bold text-gray-800">
                     <img 
-                      className="h-14 w-auto sm:h-14"
+                      className="h-16 w-auto sm:h-16"
                       src={headerLogo}
                       alt="My iOS Career Logo"
                     />

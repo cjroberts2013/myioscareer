@@ -16,50 +16,58 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        <hr />
-        <footer>
-          {/* <Bio /> */}
-        </footer>
-      </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      {/* <div className="container mx-auto px-4 max-w-7xl pt-16"> */}
+      <div className="bg-white pt-10 pb-10 px-4 sm:px-6 lg:px-0 lg:pt-12 lg:pb-12 ">
+        <div className="relative max-w-7xl mx-auto  lg:px-8">
+          <div>
+            <header>
+              <p className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl pb-4">{post.frontmatter.title}</p>
+              <p className="text-xl text-gray-500">{post.frontmatter.date}</p>
+            </header>
+          </div>
+          <article
+            className="blog-post"
+            itemScope
+            itemType="http://schema.org/Article"
+          >
+            <section
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+              className="py-4"
+            />
+            <hr />
+            <footer>
+              {/* <Bio /> */}
+            </footer>
+          </article>
+          <nav className="blog-post-nav pt-4">
+            <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0,
+              }}
+            >
+              <li className="font-semibold text-lg">
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li className="font-semibold text-lg">
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </Layout>
   )
 }

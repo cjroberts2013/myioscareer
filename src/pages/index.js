@@ -62,10 +62,10 @@ const BlogIndex = ({ data, location }) => {
             )
           })}
         </ol> */}
-        <div className="bg-white pt-10 pb-12 px-4 sm:px-6 lg:pt-12 lg:pb-16 lg:px-8">
-          <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
+        <div className="bg-white pt-10 pb-12 px-4 sm:px-6 lg:px-0 lg:pt-12 lg:pb-16 ">
+          <div className="relative max-w-7xl mx-auto divide-y-2 divide-gray-200 lg:px-8">
             <div>
-              <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Blog Posts</h2>
+              <p className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Blog Posts</p>
               <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
                 <p className="text-xl text-gray-500">Weekly iOS focused articles.</p>
               </div>
