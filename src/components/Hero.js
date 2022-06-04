@@ -4,7 +4,7 @@ import heroimg from './../images/website-image-1.png'
 
 export default function Hero() {
   return (
-        <div className="pt-10 bg-white sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div className="pt-10 bg-white sm:pt-10 lg:pt-8 lg:pb-10 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -27,7 +27,7 @@ export default function Hero() {
                   </div> */}
                 </div>
               </div>
-              <div className="mt-12 mb-16 sm:mb-48 lg:m-12 lg:relative">
+              <div className="mt-12 mb-16 sm:mb-20 lg:m-12 lg:relative">
                 <div className="mx-auto my-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
